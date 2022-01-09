@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}CONTACT{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0">
+<img src="/static/contact us.JPG" class="d-block w-100 mx-0 my-0" alt="...">
+<h1 class="text-center"><font color="white">Contact Us</h1>
+<form method="POST" action="/contact">
+{% csrf_token %}
+<div class="mb-3 mx-4">
+  <label for="email">Email address</label>
+  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+</div>
+<div class="mb-3 mx-4">
+  <label for="desc" class="form-label">Queries</label>
+  <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+</div>
+<div class="container-fluid px-0 mx-4">
+<button class="btn btn-primary" type="submit">submit</button>
+</div>
+</form>
+<style>
+body {
+  background-image: url('/static/red.jpg');
+}
+</style>
+</head>
+<body>
+</div>
+
+
+{% endblock body %}
